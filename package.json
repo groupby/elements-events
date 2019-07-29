@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "Shared event names and interfaces used in the SF-X project",
   "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "esnext": "esnext/index.ts",
   "scripts": {
+    "build": "tsc && tsc -p tsconfig.esnext.json"
   },
   "repository": {
     "type": "git",
@@ -14,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/groupby/sfx-events/issues"
   },
-  "homepage": "https://github.com/groupby/sfx-events#readme"
+  "homepage": "https://github.com/groupby/sfx-events#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
 }
