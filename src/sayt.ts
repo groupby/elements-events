@@ -7,3 +7,8 @@ export interface AutocompleteReceivedResultsPayload {
   /** The ID of the search box that initiated this request. */
   searchbox?: string;
 }
+
+/** The name of the event fired when an autocomplete request fails. */
+export const AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
+/** The type of the [[AUTOCOMPLETE_ERROR]] event payload. */
+export type AutocompleteErrorPayload = Error;
