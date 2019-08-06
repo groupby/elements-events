@@ -40,3 +40,5 @@ export interface AutocompleteSearchTermItem {
   /** The search term. */
   label: string;
 }
+
+// TODO revisit SAYT component once sayt hide/show functionality merged in
