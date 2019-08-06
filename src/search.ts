@@ -1,0 +1,59 @@
+/** The name of the event fired to request a search. */
+export const SEARCH_REQUEST = 'sfx::search_request';
+/** The type of the search request event payload. The payload is the search term. */
+export type SearchRequestPayload = string;
+
+/** The name of the event fired when the results of a search request have been received.  */
+export const SEARCH_RESPONSE = 'sfx::search_response';
+/** The type of the payload of the [[PRODUCTS_EVENT]] event. */
+export interface ProductsEventPayload {
+  /** The products returned in the search response. */
+  products: ProductModel[];
+}
+
+/** The name of the event fired when a search request fails. */
+export const SEARCH_ERROR = 'sfx::search_error';
+/** The type of the [[SEARCH_ERROR]] event payload. */
+export type SearchErrorPayload = Error;
+
+/**
+ *  The type of product that is expected by the product component.
+ */
+export interface ProductModel extends Record<string, any>{
+  /** The name of the product. */
+  title?: string;
+  /** The display price of the product. */
+  price?: number;
+  /** The url of the product image. */
+  imageSrc?: string;
+  /** The alternative text for the product image. */
+  imageAlt?: string;
+  /** The url for product details page. */
+  productUrl?: string;
+  /** The variants of this product. */
+  variants?: ProductVariantsModel;
+}
+
+/**
+ * The type that contains the collection of variants.
+ */
+export interface ProductVariantsModel {
+  /** The type of variant rendered. */
+  type: 'color' | 'image' | 'text';
+  /** The list of variants. */
+  items: ProductVariantModel[];
+}
+
+/**
+ * The type of variant that is expected by the product variant component.
+ */
+export interface ProductVariantModel {
+  /** The background color for the variant. Must be a valid css color. */
+  color?: string;
+  /** The url for the variant thumbnail. */
+  image?: string;
+  /** The label for the variant. */
+  text: string;
+  /** The product data specific to this variant. */
+  product: ProductModel;
+}
