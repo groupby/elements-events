@@ -13,7 +13,7 @@ export const AUTOCOMPLETE_RESULTS_RECEIVED = 'sfx::autocomplete_results_received
 /** The type of the [[AUTOCOMPLETE_RESULTS_RECEIVED]] event payload. */
 export interface AutocompleteReceivedResultsPayload {
   /** A list of autocomplete results. */
-  results: string[];
+  results: AutocompleteResponseSection[];
   /** The ID of the search box that initiated this request. */
   searchbox?: string;
 }
@@ -22,3 +22,13 @@ export interface AutocompleteReceivedResultsPayload {
 export const AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
 /** The type of the [[AUTOCOMPLETE_ERROR]] event payload. */
 export type AutocompleteErrorPayload = Error;
+
+/**
+ * The type of an autocomplete result.
+ */
+export interface AutocompleteResponseSection {
+  /** The title given to the list of results. */
+  title: string;
+  /** The transformed autocomplete results. */
+  items: any[];
+}
