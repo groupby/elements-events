@@ -5,10 +5,10 @@ export type SearchRequestPayload = string;
 
 /** The name of the event fired when the results of a search request have been received.  */
 export const SEARCH_RESPONSE = 'sfx::search_response';
-/** The type of the payload of the [[PRODUCTS_EVENT]] event. */
-export interface ProductsEventPayload {
+/** The type of the payload of the [[SEARCH_RESPONSE]] event. */
+export interface SearchResponsePayload {
   /** The products returned in the search response. */
-  products: ProductModel[];
+  products: Product[];
 }
 
 /** The name of the event fired when a search request fails. */
@@ -45,7 +45,7 @@ export interface SearchboxChangePayload {
 /**
  *  The type of product that is expected by the product component.
  */
-export interface ProductModel extends Record<string, any> {
+export interface Product extends Record<string, any> {
   /** The name of the product. */
   title?: string;
   /** The display price of the product. */
@@ -57,23 +57,23 @@ export interface ProductModel extends Record<string, any> {
   /** The url for product details page. */
   productUrl?: string;
   /** The variants of this product. */
-  variants?: ProductVariantsModel;
+  variants?: ProductVariants;
 }
 
 /**
  * The type that contains the collection of variants.
  */
-export interface ProductVariantsModel {
+export interface ProductVariants {
   /** The type of variant rendered. */
   type: 'color' | 'image' | 'text';
   /** The list of variants. */
-  items: ProductVariantModel[];
+  items: ProductVariant[];
 }
 
 /**
  * The type of variant that is expected by the product variant component.
  */
-export interface ProductVariantModel {
+export interface ProductVariant {
   /** The background color for the variant. Must be a valid css color. */
   color?: string;
   /** The url for the variant thumbnail. */
@@ -81,5 +81,5 @@ export interface ProductVariantModel {
   /** The label for the variant. */
   text: string;
   /** The product data specific to this variant. */
-  product: ProductModel;
+  product: Product;
 }
