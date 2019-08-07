@@ -1,7 +1,7 @@
 /**
  * The type of an autocomplete result.
  */
-export interface AutocompleteResponseSection<T = any> {
+export interface AutocompleteResultGroup<T = any> {
   /** The title given to the list of results. */
   title: string;
   /** The transformed autocomplete results. */

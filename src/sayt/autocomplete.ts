@@ -1,5 +1,5 @@
 import { QueryTimeAutocompleteConfig } from 'sayt';
-import { AutocompleteResponseSection } from './results';
+import { AutocompleteResultGroup } from './results';
 
 /** The name of the event fired when an autocomplete request is to be made. */
 export const AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
@@ -14,7 +14,7 @@ export const AUTOCOMPLETE_RESPONSE = 'sfx::autocomplete_response';
 /** The type of the [[AUTOCOMPLETE_RESPONSE]] event payload. */
 export interface AutocompleteResponsePayload {
   /** A list of autocomplete results. */
-  results: AutocompleteResponseSection[];
+  results: AutocompleteResultGroup[];
   /** The ID of the search box that initiated this request. */
   searchbox?: string;
 }
