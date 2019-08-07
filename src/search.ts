@@ -48,25 +48,25 @@ export interface SearchboxChangePayload {
 }
 
 /**
- *  The type of product that is expected by the product component.
+ *  The structure of a product.
  */
 export interface Product extends Record<string, any> {
-  /** The name of the product. */
+  /** The name of this product. */
   title?: string;
-  /** The display price of the product. */
+  /** The display price of this product. */
   price?: number;
-  /** The url of the product image. */
+  /** The URL of this product's image. */
   imageSrc?: string;
-  /** The alternative text for the product image. */
+  /** The alternative text for this product's image. */
   imageAlt?: string;
-  /** The url for product details page. */
+  /** The URL for product details page. */
   productUrl?: string;
   /** The variants of this product. */
   variants?: ProductVariants;
 }
 
 /**
- * The type that contains the collection of variants.
+ * The type of a collection of variants.
  */
 export interface ProductVariants {
   /** The type of variant rendered. */
@@ -76,15 +76,15 @@ export interface ProductVariants {
 }
 
 /**
- * The type of variant that is expected by the product variant component.
+ * The structure of a product variant.
  */
 export interface ProductVariant {
-  /** The background color for the variant. Must be a valid css color. */
+  /** The variant color. Must be a valid CSS color. */
   color?: string;
-  /** The url for the variant thumbnail. */
+  /** The URL for the variant thumbnail. */
   image?: string;
   /** The label for the variant. */
   text: string;
-  /** The product data specific to this variant. */
+  /** The product data that is specific to this variant. */
   product: Product;
 }
