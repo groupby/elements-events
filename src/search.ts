@@ -10,7 +10,7 @@ export interface SearchRequestPayload {
 
 /** The name of the event fired when the results of a search request have been received.  */
 export const SEARCH_RESPONSE = 'sfx::search_response';
-/** The type of the payload of the [[SEARCH_RESPONSE]] event. */
+/** The type of the [[SEARCH_RESPONSE]] event payload. */
 export interface SearchResponsePayload {
   /** The products returned in the search response. */
   products: Product[];
