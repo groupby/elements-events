@@ -1,4 +1,4 @@
-/** The name of the event fired when the search term in the search box is updated. */
+/** The name of the event fired when the user has changed the text in the search box. */
 export const SEARCHBOX_CHANGE = 'sfx::searchbox_change';
 /** The type of the [[SEARCHBOX_CHANGE]] event payload. */
 export interface SearchboxChangePayload {
