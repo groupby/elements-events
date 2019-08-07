@@ -1,4 +1,5 @@
 import { QueryTimeAutocompleteConfig } from 'sayt';
+import { AutocompleteResponseSection } from './results';
 
 /** The name of the event fired when an autocomplete request is to be made. */
 export const AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
@@ -22,23 +23,5 @@ export interface AutocompleteResponsePayload {
 export const AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
 /** The type of the [[AUTOCOMPLETE_ERROR]] event payload. */
 export type AutocompleteErrorPayload = Error;
-
-/**
- * The type of an autocomplete result.
- */
-export interface AutocompleteResponseSection<T = any> {
-  /** The title given to the list of results. */
-  title: string;
-  /** The transformed autocomplete results. */
-  items: T[];
-}
-
-/**
- * The type of an autocomplete search term item.
- */
-export interface AutocompleteSearchTermItem {
-  /** The search term. */
-  label: string;
-}
 
 // TODO revisit SAYT component once sayt hide/show functionality merged in
