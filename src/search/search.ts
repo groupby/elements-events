@@ -3,12 +3,13 @@ import { Product } from './product';
 /** The name of the event fired to request a search. */
 export const SEARCH_REQUEST = 'sfx::search_request';
 /** The type of the [[SEARCH_REQUEST]] event payload. */
-export interface SearchRequestPayload {
-  /** The ID of the search box that initiated this request. */
-  searchbox?: string;
-  /** The search term. */
-  query: string;
-}
+export type SearchRequestPayload = string;
+//export interface SearchRequestPayload {
+//  /** The ID of the search box that initiated this request. */
+//  searchbox?: string;
+//  /** The search term. */
+//  query: string;
+//}
 
 /** The name of the event fired when the results of a search request have been received.  */
 export const SEARCH_RESPONSE = 'sfx::search_response';
