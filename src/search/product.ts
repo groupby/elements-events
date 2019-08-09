@@ -1,5 +1,5 @@
 /**
- *  The structure of a product.
+ * The structure of a product.
  */
 export interface Product extends Record<string, any> {
   /** The name of this product. */
