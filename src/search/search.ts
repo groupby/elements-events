@@ -14,6 +14,8 @@ export interface SearchRequestPayload {
 export const SEARCH_RESPONSE = 'sfx::search_response';
 /** The type of the [[SEARCH_RESPONSE]] event payload. */
 export interface SearchResponsePayload {
+  /** The ID of the search box that initiated this request. */
+  searchbox?: string;
   /** The products returned in the search response. */
   products: Product[];
 }
@@ -21,4 +23,9 @@ export interface SearchResponsePayload {
 /** The name of the event fired when a search request fails. */
 export const SEARCH_ERROR = 'sfx::search_error';
 /** The type of the [[SEARCH_ERROR]] event payload. */
-export type SearchErrorPayload = Error;
+export interface SearchErrorPayload {
+  /** The ID of the search box that initiated this request. */
+  searchbox?: string;
+  /** The error thrown during this request. */
+  error: Error;
+};
