@@ -10,7 +10,7 @@ export interface Product extends Record<string, any> {
   imageSrc?: string;
   /** The alternative text for this product's image. */
   imageAlt?: string;
-  /** The URL for product details page. */
+  /** The URL of this product's details page. */
   productUrl?: string;
   /** The variants of this product. */
   variants?: ProductVariants;
