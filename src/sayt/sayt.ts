@@ -15,6 +15,6 @@ export type SaytShowPayload = SaytVisibilityPayload;
  * @see [[SaytShowPayload]]
 */
 export interface SaytVisibilityPayload {
-  /** The search box ID associated with this event. */
+  /** The ID of the search box associated with this event. */
   searchbox?: string;
 };
