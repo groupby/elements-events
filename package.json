@@ -8,7 +8,8 @@
   "esnext": "esnext/index.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc && tsc -p tsconfig.esnext.json"
+    "build": "tsc && tsc -p tsconfig.esnext.json",
+    "docs": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/groupby/sfx-events#readme",
   "devDependencies": {
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^3.5.3"
   },
   "dependencies": {
