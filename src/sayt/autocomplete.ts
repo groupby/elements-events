@@ -23,5 +23,3 @@ export interface AutocompleteResponsePayload {
 export const AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
 /** The type of the [[AUTOCOMPLETE_ERROR]] event payload. */
 export type AutocompleteErrorPayload = Error;
-
-// TODO revisit SAYT component once sayt hide/show functionality merged in
