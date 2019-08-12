@@ -1,7 +1,7 @@
 import { QueryTimeAutocompleteConfig } from 'sayt';
 import { AutocompleteResultGroup } from './results';
 
-/** The name of the event fired when an autocomplete request is to be made. */
+/** The name of the event fired to request autocomplete data. */
 export const AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
 /** The type of the [[AUTOCOMPLETE_REQUEST]] event payload. */
 export interface AutocompleteRequestPayload extends QueryTimeAutocompleteConfig {
