@@ -1,0 +1,32 @@
+{
+  "name": "@sfx/events",
+  "version": "0.0.0",
+  "description": "Shared event names and interfaces used in the SF-X project",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "esnext": "esnext/index.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc && tsc -p tsconfig.esnext.json",
+    "docs": "typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groupby/sfx-events.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/groupby/sfx-events/issues"
+  },
+  "homepage": "https://github.com/groupby/sfx-events#readme",
+  "devDependencies": {
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-nojekyll": "^1.0.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "sayt": "^0.1.9"
+  }
+}
