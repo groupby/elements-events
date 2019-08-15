@@ -5,6 +5,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "esnext": "esnext/index.ts",
+  "files": [
+    "dist/",
+    "esnext/",
+    "src/"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc && tsc -p tsconfig.esnext.json",
