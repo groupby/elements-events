@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "description": "Shared event names and interfaces used in the SF-X project",
   "main": "dist/index.js",
-  "module": "src/index.ts",
   "types": "dist/index.d.ts",
   "esnext": "esnext/index.ts",
+  "files": [
+    "dist/",
+    "esnext/",
+    "src/"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc && tsc -p tsconfig.esnext.json",
