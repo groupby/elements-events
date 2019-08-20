@@ -4,9 +4,11 @@ import { AutocompleteResultGroup } from './results';
 /** The name of the event fired to request autocomplete data. */
 export const AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
 /** The type of the [[AUTOCOMPLETE_REQUEST]] event payload. */
-export interface AutocompleteRequestPayload extends QueryTimeAutocompleteConfig {
+export interface AutocompleteRequestPayload {
   /** The search term to autocomplete. */
   query: string;
+  /** The extra configuration options to customize the request. */
+  config?: QueryTimeAutocompleteConfig;
   /** The ID of the search box that initiated this request. */
   searchbox?: string;
 }
