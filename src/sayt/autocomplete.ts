@@ -1,5 +1,5 @@
 import { QueryTimeAutocompleteConfig } from 'sayt';
-import { WithSearchbox } from '../includes/searchbox';
+import { ErrorPayload, WithSearchbox } from '../includes';
 import { AutocompleteResultGroup } from './results';
 
 /** The name of the event fired to request autocomplete data. */
@@ -23,7 +23,4 @@ export interface AutocompleteResponsePayload extends WithSearchbox {
 /** The name of the event fired when an autocomplete request fails. */
 export const AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
 /** The type of the [[AUTOCOMPLETE_ERROR]] event payload. */
-export interface AutocompleteErrorPayload extends WithSearchbox {
-  /** The error thrown during this request. */
-  error: Error;
-};
+export interface AutocompleteErrorPayload extends ErrorPayload, WithSearchbox {}

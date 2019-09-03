@@ -1,4 +1,4 @@
-import { WithSearchbox } from '../includes/searchbox';
+import { ErrorPayload, WithSearchbox } from '../includes';
 import { Product } from './product';
 
 /** The name of the event fired to request a search. */
@@ -20,7 +20,4 @@ export interface SearchResponsePayload extends WithSearchbox {
 /** The name of the event fired when a search request fails. */
 export const SEARCH_ERROR = 'sfx::search_error';
 /** The type of the [[SEARCH_ERROR]] event payload. */
-export interface SearchErrorPayload extends WithSearchbox {
-  /** The error thrown during this request. */
-  error: Error;
-};
+export interface SearchErrorPayload extends ErrorPayload, WithSearchbox {}
