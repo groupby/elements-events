@@ -1,13 +1,11 @@
 import { QueryTimeAutocompleteConfig } from 'sayt';
-import { ErrorPayload, WithSearchbox } from '../includes';
+import { ErrorPayload, WithQuery, WithSearchbox } from '../includes';
 import { AutocompleteResultGroup } from './results';
 
 /** The name of the event fired to request autocomplete data. */
 export const AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
 /** The type of the [[AUTOCOMPLETE_REQUEST]] event payload. */
-export interface AutocompleteRequestPayload extends WithSearchbox {
-  /** The search term to autocomplete. */
-  query: string;
+export interface AutocompleteRequestPayload extends WithQuery, WithSearchbox {
   /** The extra configuration options to customize the request. */
   config?: QueryTimeAutocompleteConfig;
 }

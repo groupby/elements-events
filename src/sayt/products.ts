@@ -1,12 +1,10 @@
 import { Request } from 'groupby-api';
-import { ErrorPayload, Product, WithSearchbox } from '../includes';
+import { ErrorPayload, Product, WithQuery, WithSearchbox } from '../includes';
 
 /** The name of the event fired to request SAYT products. */
 export const SAYT_PRODUCTS_REQUEST = 'sfx::sayt_products_request';
 /** The type of the [[SAYT_PRODUCTS_REQUEST]] event payload. */
-export interface SaytProductsRequestPayload extends WithSearchbox {
-  /** The search term. */
-  query: string;
+export interface SaytProductsRequestPayload extends WithQuery, WithSearchbox {
   /** The extra configuration options to customize the request. */
   config?: Partial<Request>;
 }
