@@ -1,5 +1,5 @@
 import { ErrorPayload, WithSearchbox } from '../includes';
-import { Product } from './product';
+import { Product } from './includes/product';
 
 /** The name of the event fired to request a search. */
 export const SEARCH_REQUEST = 'sfx::search_request';
