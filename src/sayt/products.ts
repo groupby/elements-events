@@ -19,4 +19,4 @@ export interface SaytProductsResponsePayload extends WithSearchbox {
 /** The name of the event fired when a SAYT products request fails. */
 export const SAYT_PRODUCTS_ERROR = 'sfx::sayt_products_error';
 /** The type of the [[SAYT_PRODUCTS_ERROR]] event payload. */
-export interface SaytProductsError extends ErrorPayload, WithSearchbox {}
+export interface SaytProductsErrorPayload extends ErrorPayload, WithSearchbox {}
