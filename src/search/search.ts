@@ -1,3 +1,4 @@
+import { Results } from 'groupby-api';
 import { ErrorPayload, WithQuery, WithSearchbox } from '../includes';
 import { Product } from '../includes/product';
 
@@ -10,8 +11,7 @@ export interface SearchRequestPayload extends WithQuery, WithSearchbox {}
 export const SEARCH_RESPONSE = 'sfx::search_response';
 /** The type of the [[SEARCH_RESPONSE]] event payload. */
 export interface SearchResponsePayload extends WithSearchbox {
-  /** The products returned in the search response. */
-  products: Product[];
+  results: Results;
 }
 
 /** The name of the event fired when a search request fails. */
