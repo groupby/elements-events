@@ -1,4 +1,4 @@
-import { WithSearchbox } from '../includes/searchbox';
+import { WithGroup } from '../includes';
 
 /** The name of the event fired when SAYT should be hidden. */
 export const SAYT_HIDE = 'sfx::sayt_hide';
@@ -16,4 +16,4 @@ export interface SaytShowPayload extends SaytVisibilityPayload {}
  * @see [[SaytHidePayload]]
  * @see [[SaytShowPayload]]
 */
-export interface SaytVisibilityPayload extends WithSearchbox {}
+export interface SaytVisibilityPayload extends WithGroup {}
