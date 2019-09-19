@@ -1,4 +1,4 @@
 export * from './error';
 export * from './product';
 export * from './query';
-export * from './searchbox';
+export * from './group';
