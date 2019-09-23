@@ -1,6 +1,7 @@
 /**
  * An event whose payload type extends this interface may be associated
- * in some way with a particular search box.
+ * in some way with an event group. Events with the same group name
+ * should be considered related.
  */
 export interface WithGroup {
   /**
