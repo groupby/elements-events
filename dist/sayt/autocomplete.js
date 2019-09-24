@@ -6,5 +6,4 @@ exports.AUTOCOMPLETE_REQUEST = 'sfx::autocomplete_request';
 exports.AUTOCOMPLETE_RESPONSE = 'sfx::autocomplete_response';
 /** The name of the event fired when an autocomplete request fails. */
 exports.AUTOCOMPLETE_ERROR = 'sfx::autocomplete_error';
-;
 //# sourceMappingURL=autocomplete.js.map
