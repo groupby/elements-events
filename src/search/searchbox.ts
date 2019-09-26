@@ -22,6 +22,6 @@ export const SEARCHBOX_CLICK = 'sfx::searchbox_click';
 export interface SearchboxClickPayload extends WithGroup {}
 
 /** The name of the event fired when the search box is cleared. */
-export const SEARCHBOX_CLEARED = 'sfx::searchbox_cleared';
-/** The type of the [[SEARCHBOX_CLEARED]] event payload. */
-export interface SearchboxClearedPayload extends WithGroup {}
+export const SEARCHBOX_CLEAR = 'sfx::searchbox_clear';
+/** The type of the [[SEARCHBOX_CLEAR]] event payload. */
+export interface SearchboxClearPayload extends WithGroup {}
