@@ -7,5 +7,5 @@ exports.SEARCHBOX_INPUT = 'sfx::searchbox_input';
 /** The name of the event fired when the search box is clicked. */
 exports.SEARCHBOX_CLICK = 'sfx::searchbox_click';
 /** The name of the event fired when the search box is cleared. */
-exports.SEARCHBOX_CLEARED = 'sfx::searchbox_cleared';
+exports.SEARCHBOX_CLEAR = 'sfx::searchbox_clear';
 //# sourceMappingURL=searchbox.js.map
