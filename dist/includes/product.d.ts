@@ -15,6 +15,7 @@ export interface Product extends Record<string, any> {
     /** The variants of this product. */
     variants?: ProductVariants;
 }
+export declare type ProductTransformer<T> = (product: Record<string, any>) => T;
 /**
  * The type of a collection of variants.
  */
