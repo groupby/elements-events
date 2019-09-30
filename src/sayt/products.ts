@@ -1,4 +1,4 @@
-import { Request } from 'groupby-api';
+import { Request, Results } from 'groupby-api';
 import { ErrorPayload, Product, WithQuery, WithGroup } from '../includes';
 
 /** The name of the event fired to request SAYT products. */
@@ -14,6 +14,7 @@ export const SAYT_PRODUCTS_RESPONSE = 'sfx::sayt_products_response';
 /** The type of the [[SAYT_PRODUCTS_RESPONSE]] event payload. */
 export interface SaytProductsResponsePayload extends WithGroup {
   products: Product[];
+  originalResponse: Results;
 }
 
 /** The name of the event fired when a SAYT products request fails. */
