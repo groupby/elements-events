@@ -16,6 +16,7 @@ export interface Product extends Record<string, any> {
   variants?: ProductVariants;
 }
 
+/** The type of a function used to transform record data into products. */
 export type ProductTransformer<T> = (product: Record<string, any>) => T;
 
 /**
