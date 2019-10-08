@@ -12,13 +12,21 @@ export interface SearchRequestPayload extends WithQuery, WithGroup {
 /** The name of the event fired when the results of a search request have been received.  */
 export const SEARCH_RESPONSE = 'sfx::search_response';
 
-/** The type of the results within a search response payload. */
+/**
+ * The type of the results within a search response payload.
+ *
+ * @typeparam P The type of a product in the response.
+*/
 export interface SearchResponseSection<P> {
   originalResponse: Results;
   products: P[];
 }
 
-/** The type of the [[SEARCH_RESPONSE]] event payload. */
+/**
+ * The type of the [[SEARCH_RESPONSE]] event payload.
+ *
+ * @typeparam P The type of a product in the payload.
+*/
 export interface SearchResponsePayload<P> extends WithGroup {
   results: SearchResponseSection<P>;
 }
