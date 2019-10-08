@@ -16,7 +16,7 @@ export const SEARCH_RESPONSE = 'sfx::search_response';
  * The type of the results within a search response payload.
  *
  * @typeparam P The type of a product in the response.
-*/
+ */
 export interface SearchResponseSection<P> {
   originalResponse: Results;
   products: P[];
@@ -26,7 +26,7 @@ export interface SearchResponseSection<P> {
  * The type of the [[SEARCH_RESPONSE]] event payload.
  *
  * @typeparam P The type of a product in the payload.
-*/
+ */
 export interface SearchResponsePayload<P> extends WithGroup {
   results: SearchResponseSection<P>;
 }

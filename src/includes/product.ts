@@ -21,7 +21,7 @@ export interface Product extends Record<string, any> {
  *
  * @typeparam T The type of the product into which the Record will be
  * transformed.
-*/
+ */
 export type ProductTransformer<T> = (product: Record<string, any>) => T;
 
 /**
