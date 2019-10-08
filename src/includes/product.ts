@@ -19,7 +19,7 @@ export interface Product extends Record<string, any> {
 /**
  * The type of a function used to transform record data into products.
  *
- * @typeparam T The type of the product into which the Record will be
+ * @typeparam T The type of the product into which the record will be
  * transformed.
  */
 export type ProductTransformer<T> = (product: Record<string, any>) => T;
