@@ -11,9 +11,13 @@ export interface SaytProductsRequestPayload extends WithQuery, WithGroup {
 
 /** The name of the event fired when the results of a SAYT products request have been received. */
 export const SAYT_PRODUCTS_RESPONSE = 'sfx::sayt_products_response';
-/** The type of the [[SAYT_PRODUCTS_RESPONSE]] event payload. */
-export interface SaytProductsResponsePayload extends WithGroup {
-  products: Product[];
+/**
+ * The type of the [[SAYT_PRODUCTS_RESPONSE]] event payload.
+ *
+ * @typeparam P The type of a product in the payload.
+ */
+export interface SaytProductsResponsePayload<P> extends WithGroup {
+  products: P[];
   originalResponse: Results;
 }
 
