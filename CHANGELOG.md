@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `AUTOCOMPLETE_ERROR`
     - `AUTOCOMPLETE_REQUEST`
     - `AUTOCOMPLETE_RESPONSE`
+    - `CACHE_ERROR`
+    - `CACHE_REQUEST`
+    - `CACHE_RESPONSE`
     - `SAYT_HIDE`
     - `SAYT_SHOW`
     - `SEARCHBOX_CLEARED`
@@ -26,6 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `AutocompleteResponsePayload`
     - `AutocompleteResultGroup`
     - `AutocompleteSearchTermItem`
+    - `CacheErrorPayload`
+    - `CacheRequestPayload`
+    - `CacheResponsePayload`
     - `Product`
     - `ProductVariant`
     - `ProductVariants`
