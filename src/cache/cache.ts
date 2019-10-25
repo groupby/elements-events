@@ -1,4 +1,4 @@
-import { WithGroup } from '../includes/group';
+import { ErrorPayload, WithGroup } from '../includes';
 
 /** The name of the event fired when data is being requested from the cache. */
 export const CACHE_REQUEST = 'sfx::cache_request';
@@ -19,3 +19,8 @@ export interface CacheResponsePayload extends WithGroup {
   /** The data that was cached. */
   data: string;
 }
+
+/** The name of the event fired when retrieving data from the cache failed. */
+export const CACHE_ERROR = 'sfx::cache_error';
+/** The type of the [[CACHE_ERROR]] event payload. */
+export interface CacheErrorPayload extends ErrorPayload, WithGroup {}
