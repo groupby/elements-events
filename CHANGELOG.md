@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- SFX-248: Added a number of event names and interfaces used by Elements.
+- SFX-248: Added a number of event names and interfaces used by GB Elements.
   - Event name constants:
     - `AUTOCOMPLETE_ERROR`
     - `AUTOCOMPLETE_REQUEST`
