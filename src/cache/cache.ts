@@ -1,7 +1,7 @@
 import { ErrorPayload, WithGroup } from '../includes';
 
 /** The name of the event fired when data is being requested from the cache. */
-export const CACHE_REQUEST = 'sfx::cache_request';
+export const CACHE_REQUEST = 'gbe::cache_request';
 /** The type of the [[CACHE_REQUEST]] event payload. */
 export interface CacheRequestPayload extends WithGroup {
   /** The name of the cached data to return. */
@@ -21,6 +21,6 @@ export interface CacheResponsePayload extends WithGroup {
 }
 
 /** The name of the event fired when retrieving data from the cache failed. */
-export const CACHE_ERROR = 'sfx::cache_error';
+export const CACHE_ERROR = 'gbe::cache_error';
 /** The type of the [[CACHE_ERROR]] event payload. */
 export interface CacheErrorPayload extends ErrorPayload, WithGroup {}
