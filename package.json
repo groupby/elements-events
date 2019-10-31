@@ -1,7 +1,7 @@
 {
   "name": "@elements/events",
   "version": "0.0.0",
-  "description": "Shared event names and interfaces used in the Elements project",
+  "description": "Shared event names and interfaces used in the GroupBy Elements project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "esnext": "esnext/index.ts",
