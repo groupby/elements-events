@@ -11,7 +11,7 @@ export interface CacheRequestPayload extends WithGroup {
 }
 
 /** The recommended prefix to use for the name of the event fired when data is returned from the cache. */
-export const CACHE_RESPONSE_PREFIX = 'sfx::cache_response-';
+export const CACHE_RESPONSE_PREFIX = 'gbe::cache_response-';
 /** The type of the cache response event payload. */
 export interface CacheResponsePayload extends WithGroup {
   /** The name of the cached data that was returned. */
