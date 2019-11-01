@@ -17,7 +17,7 @@ export interface CacheResponsePayload extends WithGroup {
   /** The name of the cached data that was returned. */
   name: string;
   /** The data that was cached. */
-  data: string;
+  data: any;
 }
 
 /** The name of the event fired when retrieving data from the cache failed. */
