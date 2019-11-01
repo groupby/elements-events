@@ -4,6 +4,4 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./cache"));
-__export(require("./sayt"));
-__export(require("./search"));
 //# sourceMappingURL=index.js.map
