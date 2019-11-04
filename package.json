@@ -1,5 +1,5 @@
 {
-  "name": "@elements/events",
+  "name": "@groupby/elements-events",
   "version": "0.0.0",
   "description": "Shared event names and interfaces used in the GroupBy Elements project",
   "main": "dist/index.js",
