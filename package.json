@@ -1,7 +1,7 @@
 {
-  "name": "@sfx/events",
+  "name": "@groupby/elements-events",
   "version": "0.0.0",
-  "description": "Shared event names and interfaces used in the SF-X project",
+  "description": "Shared event names and interfaces used in the GroupBy Elements project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "esnext": "esnext/index.ts",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/groupby/sfx-events.git"
+    "url": "https://github.com/groupby/elements-events.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/groupby/sfx-events/issues"
+    "url": "https://github.com/groupby/elements-events/issues"
   },
-  "homepage": "https://github.com/groupby/sfx-events#readme",
+  "homepage": "https://github.com/groupby/elements-events#readme",
   "devDependencies": {
     "typedoc": "^0.15.0",
     "typedoc-plugin-nojekyll": "^1.0.1",
