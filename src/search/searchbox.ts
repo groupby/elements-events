@@ -6,6 +6,7 @@ export const UPDATE_SEARCH_TERM = 'gbe::update_search_term';
 export interface UpdateSearchTermPayload extends WithGroup {
   /** A search term. */
   term: string;
+  /** Whether or not to trigger a search. */
   search?: boolean;
 }
 
