@@ -5,6 +5,8 @@ export declare const UPDATE_SEARCH_TERM = "gbe::update_search_term";
 export interface UpdateSearchTermPayload extends WithGroup {
     /** A search term. */
     term: string;
+    /** Whether or not to trigger a search. */
+    search?: boolean;
 }
 /** The name of the event fired when the user has changed the text in the search box. */
 export declare const SEARCHBOX_INPUT = "gbe::searchbox_input";
