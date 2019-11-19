@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `SEARCH_ERROR`
     - `SEARCH_REQUEST`
     - `SEARCH_RESPONSE`
+    - `TRACKER_SEARCH`
     - `UPDATE_SEARCH_TERM`
   - Event payload interfaces:
     - `AutocompleteErrorPayload`
@@ -44,4 +45,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `SearchboxClearedPayload`
     - `SearchboxClickPayload`
     - `SearchboxInputPayload`
+    - `TrackerSearchPayload`
     - `UpdateSearchTermPayload`
