@@ -17,13 +17,9 @@ export const SAYT_PRODUCTS_RESPONSE = 'gbe::sayt_products_response';
  * @typeparam P The type of a product in the payload.
  */
 export interface SaytProductsResponsePayload<P> extends WithGroup {
-  /**
-   * The original, unformatted response from the API.
-   */
+  /** The original, unformatted response from the Search API. */
   originalResponse: Results;
-  /**
-   * The formatted products results.
-   */
+  /** The formatted products results. */
   products: P[];
 }
 

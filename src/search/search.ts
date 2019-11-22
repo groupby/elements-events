@@ -18,13 +18,9 @@ export const SEARCH_RESPONSE = 'gbe::search_response';
  * @typeparam P The type of a product in the payload.
  */
 export interface SearchResponsePayload<P> extends WithGroup {
-  /**
-   * The original, unformatted response from the API.
-   */
+  /** The original, unformatted response from the Search API. */
   originalResponse: Results;
-  /**
-   * The formatted products results.
-   */
+  /** The formatted products results. */
   products: P[];
 }
 
