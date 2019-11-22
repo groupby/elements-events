@@ -6,7 +6,10 @@ import { Product } from '../includes/product';
 export const SEARCH_REQUEST = 'gbe::search_request';
 /** The type of the [[SEARCH_REQUEST]] event payload. */
 export interface SearchRequestPayload extends WithQuery, WithGroup {
+  /** The search request configuration. */
   config?: Partial<Request>;
+  /** The origin of the search action. */
+  origin: string;
 }
 
 /** The name of the event fired when the results of a search request have been received.  */
