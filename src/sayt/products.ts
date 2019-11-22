@@ -7,6 +7,8 @@ export const SAYT_PRODUCTS_REQUEST = 'gbe::sayt_products_request';
 export interface SaytProductsRequestPayload extends WithQuery, WithGroup {
   /** The extra configuration options to customize the request. */
   config?: Partial<Request>;
+  /** The origin of the products request action. */
+  origin: string;
 }
 
 /** The name of the event fired when the results of a SAYT products request have been received. */

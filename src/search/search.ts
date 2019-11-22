@@ -8,7 +8,7 @@ export const SEARCH_REQUEST = 'gbe::search_request';
 export interface SearchRequestPayload extends WithQuery, WithGroup {
   /** The search request configuration. */
   config?: Partial<Request>;
-  /** The origin of the search action. */
+  /** The origin of the search request action. */
   origin: string;
 }
 
