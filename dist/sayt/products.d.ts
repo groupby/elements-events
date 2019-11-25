@@ -15,8 +15,10 @@ export declare const SAYT_PRODUCTS_RESPONSE = "gbe::sayt_products_response";
  * @typeparam P The type of a product in the payload.
  */
 export interface SaytProductsResponsePayload<P> extends WithGroup {
-    products: P[];
+    /** The original, unformatted response from the Search API. */
     originalResponse: Results;
+    /** The formatted products results. */
+    products: P[];
 }
 /** The name of the event fired when a SAYT products request fails. */
 export declare const SAYT_PRODUCTS_ERROR = "gbe::sayt_products_error";

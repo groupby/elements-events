@@ -9,21 +9,15 @@ export interface SearchRequestPayload extends WithQuery, WithGroup {
 /** The name of the event fired when the results of a search request have been received.  */
 export declare const SEARCH_RESPONSE = "gbe::search_response";
 /**
- * The type of the results within a search response payload.
- *
- * @typeparam P The type of a product in the response.
- */
-export interface SearchResponseSection<P> {
-    originalResponse: Results;
-    products: P[];
-}
-/**
  * The type of the [[SEARCH_RESPONSE]] event payload.
  *
  * @typeparam P The type of a product in the payload.
  */
 export interface SearchResponsePayload<P> extends WithGroup {
-    results: SearchResponseSection<P>;
+    /** The original, unformatted response from the Search API. */
+    originalResponse: Results;
+    /** The formatted products results. */
+    products: P[];
 }
 /** The name of the event fired when a search request fails. */
 export declare const SEARCH_ERROR = "gbe::search_error";
