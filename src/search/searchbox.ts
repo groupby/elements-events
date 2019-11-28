@@ -8,6 +8,8 @@ export interface UpdateSearchTermPayload extends WithGroup {
   term: string;
   /** Whether or not to trigger a search. */
   search?: boolean;
+  /** The origin of the user action. */
+  origin: string;
 }
 
 /** The name of the event fired when the user has changed the text in the search box. */
