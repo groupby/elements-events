@@ -1,6 +1,5 @@
 import { Request, Results } from 'groupby-api';
 import { ErrorPayload, WithQuery, WithGroup } from '../includes';
-import { Product } from '../includes/product';
 
 /** The name of the event fired to request a search. */
 export const SEARCH_REQUEST = 'gbe::search_request';
