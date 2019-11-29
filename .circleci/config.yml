@@ -88,6 +88,40 @@ jobs:
               echo "Nothing to publish."
             fi
 
+  docs:
+    <<: *image_default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - restore_cache: *yarn_cache
+      - run: *yarn_install
+      - run: *setup_git
+      - run:
+          name: Docs
+          command: |
+            rm -rf docs
+            yarn docs
+      - run:
+          name: Replace files in gh-pages branch
+          command: |
+            mv docs ../
+            git checkout gh-pages
+            git rm "*"
+            shopt -s dotglob
+            mv ../docs/* .
+      - run:
+          name: Commit and push
+          command: |
+            git add .
+            # check that there is something to add so git commit will not fail
+            if git status --porcelain | grep -e '^M' -e '^A'; then
+              git commit -m "Generate docs"
+              git push -u origin gh-pages
+            else
+              echo "No changes to commit."
+            fi
+
 workflows:
   version: 2
 
