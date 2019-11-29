@@ -68,6 +68,26 @@ jobs:
             exit $exit_code
       - persist_to_workspace: *persist_repo
 
+  publish:
+    <<: *image
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: Install utilities
+          command: sudo apt install jq
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run:
+          name: Publish
+          command: |
+            if ! npm view ".@$(jq -r .version package.json)" | grep -q .; then
+              ./scripts/publish.sh
+            else
+              echo "Nothing to publish."
+            fi
+
 workflows:
   version: 2
 
