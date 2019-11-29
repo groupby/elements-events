@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc && tsc -p tsconfig.esnext.json",
+    "build": "./scripts/build.sh",
     "docs": "typedoc"
   },
   "repository": {
