@@ -118,7 +118,7 @@ jobs:
             # check that there is something to add so git commit will not fail
             if git status --porcelain | grep -e '^M' -e '^A'; then
               new_version="$(npm view @groupby/elements-events version)"
-              git commit -m "[skip ci] Generate docs for v${new_version}"
+              git commit -m "Generate docs for v${new_version}"
               git push -u origin gh-pages
             else
               echo "No changes to commit."
@@ -146,5 +146,8 @@ workflows:
             - release
       - docs:
           context: org-global
+          filters:
+            branches:
+              only: master
           requires:
-            - build
+            - publish
