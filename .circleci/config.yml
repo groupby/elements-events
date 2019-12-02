@@ -89,7 +89,7 @@ jobs:
             fi
 
   docs:
-    <<: *image_default
+    <<: *image
     steps:
       - checkout
       - attach_workspace:
