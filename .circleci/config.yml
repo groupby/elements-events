@@ -145,8 +145,5 @@ workflows:
             - release
       - docs:
           context: org-global
-          filters:
-            branches:
-              only: master
           requires:
-            - publish
+            - build
