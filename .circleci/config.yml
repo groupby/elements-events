@@ -128,3 +128,24 @@ workflows:
   build_test_release:
     jobs:
       - build
+      - release:
+          context: org-global
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+      - publish:
+          context: org-global
+          filters:
+            branches:
+              only: master
+          requires:
+            - release
+      - docs:
+          context: org-global
+          filters:
+            branches:
+              only: master
+          requires:
+            - publish
