@@ -108,8 +108,8 @@ jobs:
             mv docs ../
             git checkout gh-pages
             git rm "*"
+            git clean -df
             shopt -s dotglob
-            rm -rf esnext node_modules
             mv ../docs/* .
       - run:
           name: Commit and push
