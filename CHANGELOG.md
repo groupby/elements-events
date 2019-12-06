@@ -6,14 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] [minor]
 ### Changed
-- SFX-249: Create first pass of tracker service plugin for Search
+- SFX-249: Created tracker service plugin for Search
   - Added `origin` to:
     - `SaytProductsRequestPayload`
     - `SearchRequestPayload`
     - `UpdateSearchTermPayload`
 
 ### Added
-- SFX-249: Create first pass of tracker service plugin for Search
+- SFX-249: Created tracker service plugin for Search
   - Event name constants:
     - `BEACON_SEARCH`
   - Event payload interfaces:
