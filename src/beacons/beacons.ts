@@ -1,5 +1,5 @@
-import { Results } from 'groupby-api';
 import { SendableOrigin } from 'gb-tracker-client/models';
+import { Results } from 'groupby-api';
 
 /** The event to trigger a search beacon. */
 export const BEACON_SEARCH: string = 'gbe::beacon_search';
