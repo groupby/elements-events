@@ -8,9 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - SFX-249: Create first pass of tracker service plugin for Search
   - Added `origin` to:
-    - SaytProductsRequestPayload
-    - SearchRequestPayload
-    - UpdateSearchTermPayload
+    - `SaytProductsRequestPayload`
+    - `SearchRequestPayload`
+    - `UpdateSearchTermPayload`
 
 ### Added
 - SFX-249: Create first pass of tracker service plugin for Search
