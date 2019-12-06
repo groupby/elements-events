@@ -6,20 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] [minor]
 ### Changed
-- SFX-249: Created tracker service plugin for Search
-  - Added `origin` to:
-    - `SaytProductsRequestPayload`
-    - `SearchRequestPayload`
-    - `UpdateSearchTermPayload`
+- ELE-249: Added a required `origin` property to the following interfaces:
+  - `SaytProductsRequestPayload`
+  - `SearchRequestPayload`
+  - `UpdateSearchTermPayload`
 
 ### Added
-- SFX-249: Created tracker service plugin for Search
-  - Event name constants:
-    - `BEACON_SEARCH`
-  - Event payload interfaces:
-    - `BeaconSearchPayload`
-  - Dependencies:
-    - `gb-tracker-client`
+- ELE-249: Added search beacon-related event.
+  - Event name constant: `BEACON_SEARCH`
+  - Event payload interface: `BeaconSearchPayload`
+- ELE-249: Added `gb-tracker-client` as a dependency.
 
 ## [0.1.0] - 2019-11-28
 ### Added
