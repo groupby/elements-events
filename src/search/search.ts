@@ -1,3 +1,4 @@
+import { SendableOrigin } from 'gb-tracker-client/models';
 import { Request, Results } from 'groupby-api';
 import { ErrorPayload, WithQuery, WithGroup } from '../includes';
 
@@ -8,7 +9,7 @@ export interface SearchRequestPayload extends WithQuery, WithGroup {
   /** The search request configuration. */
   config?: Partial<Request>;
   /** The origin of the search request action. */
-  origin: string;
+  origin: keyof SendableOrigin;
 }
 
 /** The name of the event fired when the results of a search request have been received.  */
