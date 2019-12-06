@@ -1,4 +1,5 @@
 import { Request, Results } from 'groupby-api';
+import { SendableOrigin } from 'gb-tracker-client/models';
 import { ErrorPayload, Product, WithQuery, WithGroup } from '../includes';
 
 /** The name of the event fired to request SAYT products. */
@@ -8,7 +9,7 @@ export interface SaytProductsRequestPayload extends WithQuery, WithGroup {
   /** The extra configuration options to customize the request. */
   config?: Partial<Request>;
   /** The origin of the products request action. */
-  origin: string;
+  origin: keyof SendableOrigin;
 }
 
 /** The name of the event fired when the results of a SAYT products request have been received. */
