@@ -1,5 +1,5 @@
-import { Request, Results } from 'groupby-api';
 import { SendableOrigin } from 'gb-tracker-client/models';
+import { Request, Results } from 'groupby-api';
 import { ErrorPayload, Product, WithQuery, WithGroup } from '../includes';
 
 /** The name of the event fired to request SAYT products. */
