@@ -5,7 +5,7 @@ import { SendableOrigin } from 'gb-tracker-client/models';
 export const BEACON_SEARCH: string = 'gbe::beacon::search';
 
 /** The type of the [[BEACON_SEARCH]] event payload. */
-export interface TrackerSearchPayload {
+export interface BeaconSearchPayload {
   /** The search results from the API. */
   results: Results;
   /** The origin of the search action. */
