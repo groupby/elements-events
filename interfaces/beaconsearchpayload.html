@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SaytShowPayload | @groupby/elements-events</title>
+	<title>BeaconSearchPayload | @groupby/elements-events</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="saytshowpayload.html">SaytShowPayload</a>
+					<a href="beaconsearchpayload.html">BeaconSearchPayload</a>
 				</li>
 			</ul>
-			<h1>Interface SaytShowPayload</h1>
+			<h1>Interface BeaconSearchPayload</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The type of the <a href="../globals.html#sayt_show">SAYT_SHOW</a> event payload.</p>
+						<p>The type of the <a href="../globals.html#beacon_search">BEACON_SEARCH</a> event payload.</p>
 					</div>
 				</div>
 			</section>
@@ -77,12 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="saytvisibilitypayload.html" class="tsd-signature-type">SaytVisibilityPayload</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">SaytShowPayload</span>
-							</li>
-						</ul>
+						<span class="target">BeaconSearchPayload</span>
 					</li>
 				</ul>
 			</section>
@@ -90,31 +85,45 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="saytshowpayload.html#group" class="tsd-kind-icon">group</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="beaconsearchpayload.html#origin" class="tsd-kind-icon">origin</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="beaconsearchpayload.html#results" class="tsd-kind-icon">results</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="group" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> group</h3>
-					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="origin" class="tsd-anchor"></a>
+					<h3>origin</h3>
+					<div class="tsd-signature tsd-kind-icon">origin<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SendableOrigin</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="withgroup.html">WithGroup</a>.<a href="withgroup.html#group">group</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/groupby/elements-events/blob/d1e93e2/src/includes/group.ts#L11">includes/group.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/groupby/elements-events/blob/d1e93e2/src/beacons/beacons.ts#L12">beacons/beacons.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The name of the group associated with this event.
-							A missing group should be treated as equivalent to the empty string.</p>
+							<p>The origin of the search action.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="results" class="tsd-anchor"></a>
+					<h3>results</h3>
+					<div class="tsd-signature tsd-kind-icon">results<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Results</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/groupby/elements-events/blob/d1e93e2/src/beacons/beacons.ts#L10">beacons/beacons.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The search results from the API.</p>
 						</div>
 					</div>
 				</section>
@@ -133,10 +142,13 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="saytshowpayload.html" class="tsd-kind-icon">Sayt<wbr>Show<wbr>Payload</a>
+						<a href="beaconsearchpayload.html" class="tsd-kind-icon">Beacon<wbr>Search<wbr>Payload</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="saytshowpayload.html#group" class="tsd-kind-icon">group</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="beaconsearchpayload.html#origin" class="tsd-kind-icon">origin</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="beaconsearchpayload.html#results" class="tsd-kind-icon">results</a>
 							</li>
 						</ul>
 					</li>
