@@ -1,12 +1,15 @@
+import { SendableOrigin } from 'gb-tracker-client/models';
 import { Request, Results } from 'groupby-api';
 import { ErrorPayload, WithQuery, WithGroup } from '../includes';
-import { Product } from '../includes/product';
 
 /** The name of the event fired to request a search. */
 export const SEARCH_REQUEST = 'gbe::search_request';
 /** The type of the [[SEARCH_REQUEST]] event payload. */
 export interface SearchRequestPayload extends WithQuery, WithGroup {
+  /** The search request configuration. */
   config?: Partial<Request>;
+  /** The origin of the search request action. */
+  origin: keyof SendableOrigin;
 }
 
 /** The name of the event fired when the results of a search request have been received.  */

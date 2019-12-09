@@ -1,3 +1,4 @@
+import { SendableOrigin } from 'gb-tracker-client/models';
 import { WithGroup } from '../includes/group';
 
 /** The name of the event fired when the search term is to be updated. */
@@ -8,6 +9,8 @@ export interface UpdateSearchTermPayload extends WithGroup {
   term: string;
   /** Whether or not to trigger a search. */
   search?: boolean;
+  /** The origin of the user action. */
+  origin: keyof SendableOrigin;
 }
 
 /** The name of the event fired when the user has changed the text in the search box. */

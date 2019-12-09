@@ -30,6 +30,7 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "gb-tracker-client": "^3.7.2",
     "groupby-api": "^2.6.2",
     "sayt": "^0.1.9"
   }
